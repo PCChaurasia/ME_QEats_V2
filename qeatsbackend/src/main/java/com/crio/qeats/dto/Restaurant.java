@@ -13,6 +13,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import java.util.ArrayList;
+import java.util.List;
+import javax.validation.constraints.NotNull;
 
 
 // TODO: CRIO_TASK_MODULE_SERIALIZATION
@@ -34,8 +37,9 @@ import lombok.Data;
 // }
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
-@JsonIgnoreProperties
+//@JsonIgnoreProperties
 public class Restaurant {
 
     public Restaurant() {}
@@ -57,4 +61,5 @@ public class Restaurant {
 
     private List<String> attributes;
 }
+
 

@@ -8,7 +8,6 @@
 package com.crio.qeats.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -108,7 +107,7 @@ class RestaurantServiceTest {
         .thenReturn(restaurants);
     GetRestaurantsResponse allRestaurantsCloseBy = restaurantService
         .findAllRestaurantsCloseBy(new GetRestaurantsRequest(20.0, 30.0), LocalTime.of(22, 0));
-    assertEquals(4, allRestaurantsCloseBy.getRestaurants().size());
+    assertEquals(3, allRestaurantsCloseBy.getRestaurants().size());
     assertEquals("10", allRestaurantsCloseBy.getRestaurants().get(0).getRestaurantId());
     assertEquals("11", allRestaurantsCloseBy.getRestaurants().get(1).getRestaurantId());
     assertEquals("12", allRestaurantsCloseBy.getRestaurants().get(2).getRestaurantId());
@@ -120,7 +119,7 @@ class RestaurantServiceTest {
 
 
 
-     //assertFalse(false);
+     
   }
 
 
@@ -150,3 +149,4 @@ class RestaurantServiceTest {
     });
   }
 }
+

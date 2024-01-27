@@ -36,7 +36,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 @ExtendWith(MockitoExtension.class)
 public class RestaurantServiceMockitoTestStub {
 
-
   protected static final String FIXTURES = "fixtures/exchanges";
 
   protected ObjectMapper objectMapper = new ObjectMapper();

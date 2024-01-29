@@ -25,6 +25,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class GetRestaurantsRequest {
 
+    public GetRestaurantsRequest(@NotNull @Min(-90) @Max(90) Double latitude,
+            @NotNull @Min(-180) @Max(180) Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
     @NotNull
     @Min(-90)
     @Max(90)

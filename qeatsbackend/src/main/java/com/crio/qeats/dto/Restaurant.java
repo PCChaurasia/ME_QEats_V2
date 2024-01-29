@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.NotNull;
@@ -39,10 +40,12 @@ import javax.validation.constraints.NotNull;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
+@NoArgsConstructor
+
 //@JsonIgnoreProperties
 public class Restaurant {
 
-    public Restaurant() {}
+    
 
     @JsonProperty("restaurantId")
     private String restaurantId;

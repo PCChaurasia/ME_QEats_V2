@@ -92,16 +92,5 @@ public class RestaurantController {
   // Eg:
   // curl -X GET "http://localhost:8081/qeats/v1/menu?restaurantId=11"
 
-
-
-
-
-
-
-
-
-
-
-
 }
 
